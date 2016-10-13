@@ -1,0 +1,19 @@
+environment:
+  matrix:
+    - nodejs_version: "6"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm -g install npm
+  - npm install -g npm@latest
+  - npm i -g cross-env eslint eslint-plugin-react sass-lint
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  - npm run test
+
+build: off
+
+version: "{build}"
