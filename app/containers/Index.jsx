@@ -1,28 +1,27 @@
-import React, {Component, PropTypes} from "react";
+import React from "react";
 import {connect} from "react-redux";
+import Count from "../components/Count";
+const {Component, PropTypes} = React;
 
 class Index extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        const {children} = this.props;
-        return (
-            <div>
-                {children}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Count />
+    );
+  }
 }
 
 Index.propTypes = {
-    children: PropTypes.element.isRequired,
 };
-export default Index;
-
-// export default connect(
-//     (state) => {
-//         return {};
-//     },
-//     (dispatch) => {
-//         return {};
-//     }
-// )(Index);
+export default connect(
+  (state) => {
+    return {};
+  },
+  (dispatch) => {
+    return {};
+  }
+)(Index);

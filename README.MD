@@ -1,3 +1,7 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/cvsrq2dfxfoueuw7?svg=true)](https://ci.appveyor.com/project/HieuNV/webpack-react-redux-babel-sass-starter)
+[![Build Status](https://travis-ci.org/hieunv8/webpack-react-redux-babel-sass-starter.svg?branch=master)](https://travis-ci.org/hieunv8/webpack-react-redux-babel-sass-starter)
+[![dependencies Status](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter/status.svg)](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter)
+[![devDependencies Status](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter/dev-status.svg)](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter?type=dev)
 # Webpack + ReactJS + Redux + Babel + SASS
 
 ## Installation
