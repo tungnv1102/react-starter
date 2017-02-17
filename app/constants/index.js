@@ -1,6 +1,6 @@
 // @flow
-export const PENDING = "_PENDING";
+export const PENDING = '_PENDING'
 
-export const FULFILLED = "_FULFILLED";
+export const FULFILLED = '_FULFILLED'
 
-export const REJECTED = "_REJECTED";
+export const REJECTED = '_REJECTED'

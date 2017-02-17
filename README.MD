@@ -6,7 +6,7 @@
 
 ## Installation
 ```bash
-npm i -g cross-env eslint eslint-plugin-react sass-lint
+npm i -g cross-env sass-lint standard eslint-plugin-flowtype babel-eslint snazzy
 npm install 
 ```
 

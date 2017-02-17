@@ -1,26 +1,27 @@
-import * as Actions from "../../app/actions";
-import count from "../../app/reducers/count";
-import {fromJS} from "immutable";
+/* eslint-env jasmine */
+import * as Actions from '../../app/actions'
+import count from '../../app/reducers/count'
+import {fromJS} from 'immutable'
 
-describe("count", () => {
-    it(`${Actions.INCREMENT}`, () => {
-        let state = count(
+describe('count', () => {
+  it(`${Actions.INCREMENT}`, () => {
+    let state = count(
             fromJS({
-                value: 3
+              value: 3
             }), {
-                type: Actions.INCREMENT
+              type: Actions.INCREMENT
             }
-        );
-        expect(state.get("value")).toBe(4);
-    });
-    it(`${Actions.DECREMENT}`, () => {
-        let state = count(
+        )
+    expect(state.get('value')).toBe(4)
+  })
+  it(`${Actions.DECREMENT}`, () => {
+    let state = count(
             fromJS({
-                value: 3
+              value: 3
             }), {
-                type: Actions.DECREMENT
+              type: Actions.DECREMENT
             }
-        );
-        expect(state.get("value")).toBe(2);
-    });
-});
+        )
+    expect(state.get('value')).toBe(2)
+  })
+})
