@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/hieunv8/webpack-react-redux-babel-sass-starter.svg?branch=master)](https://travis-ci.org/hieunv8/webpack-react-redux-babel-sass-starter)
 [![dependencies Status](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter/status.svg)](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter)
 [![devDependencies Status](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter/dev-status.svg)](https://david-dm.org/hieunv8/webpack-react-redux-babel-sass-starter?type=dev)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 # Webpack + ReactJS + Redux + Babel + SASS
 
 ## Installation
