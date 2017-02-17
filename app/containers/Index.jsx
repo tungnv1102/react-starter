@@ -1,27 +1,24 @@
-import React from "react";
-import {connect} from "react-redux";
-import Count from "../components/Count";
-const {Component, PropTypes} = React;
+// noinspection JSUnresolvedVariable
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import Count from '../components/Count'
 
 class Index extends Component {
-  constructor(props) {
-    super(props);
-  }
+  static propTypes = {
 
-  render() {
+  }
+  render () {
     return (
       <Count />
-    );
+    )
   }
 }
 
-Index.propTypes = {
-};
 export default connect(
   (state) => {
-    return {};
+    return {}
   },
   (dispatch) => {
-    return {};
+    return {}
   }
-)(Index);
+)(Index)

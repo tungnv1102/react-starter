@@ -1,13 +1,13 @@
-import path from "path";
-import {DefinePlugin, HotModuleReplacementPlugin} from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from 'path'
+import {DefinePlugin, HotModuleReplacementPlugin} from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 export default {
   module: {
     loaders: [
       {
         test: /\.html$/,
         loader: 'raw',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.(js|jsx)?$/,
@@ -25,18 +25,18 @@ export default {
       {
         test: /\.json$/,
         loader: 'json'
-      },
+      }
     ]
   },
   entry: [
-    './app/index.jsx',
+    './app/index.jsx'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json'],
+    extensions: ['', '.js', '.jsx', '.json']
   },
   plugins: [
     new DefinePlugin({
@@ -44,8 +44,8 @@ export default {
     }),
     new HtmlWebpackPlugin({
       template: './app/index.html',
-      inject: 'body',
+      inject: 'body'
     }),
-    new HotModuleReplacementPlugin(),
+    new HotModuleReplacementPlugin()
   ]
-};
+}

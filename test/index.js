@@ -1,14 +1,13 @@
-import React from "react";
-import "babel-polyfill";
-const {Component, PropTypes} = React;
+// import React, {Component, PropTypes} from 'react'
+import 'babel-polyfill'
 
-let div = document.createElement("div");
-div.setAttribute("id", "root");
-document.body.appendChild(div);
+let div = document.createElement('div')
+div.setAttribute('id', 'root')
+document.body.appendChild(div)
 
-let context = require.context(".", true, /\.test\./);
-context.keys().forEach(context);
+let context = require.context('.', true, /\.test\./)
+context.keys().forEach(context)
 
-let appContext = require.context("../app", true, /\.(js|jsx)$/);
+let appContext = require.context('../app', true, /\.(js|jsx)$/)
 
-appContext.keys().forEach(appContext);
+appContext.keys().forEach(appContext)
