@@ -50,3 +50,7 @@ npm run dist
 ```
 dist/bundle.js
 ```
+
+```
+"test": "standard --fix --verbose | snazzy && node -r babel-register ./node_modules/karma/bin/karma start --singleRun true",
+```
