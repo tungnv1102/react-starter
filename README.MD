@@ -15,8 +15,6 @@ npm install
 - [webpack](https://github.com/webpack/webpack)
 - [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 - [karma-cli](https://github.com/karma-runner/karma-cli)
-- [eslint](https://github.com/eslint/eslint)
-- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 - [sass-lint](https://github.com/sasstools/sass-lint)
 - [babel](https://github.com/babel/babel)
 
@@ -52,6 +50,3 @@ npm run dist
 ```
 dist/bundle.js
 ```
-
-## Links
-- https://material.google.com/style/color.html#color-color-palette

@@ -1,6 +1,7 @@
-import path from 'path'
-import {DefinePlugin, HotModuleReplacementPlugin} from 'webpack'
+// noinspection JSUnresolvedVariable
+import {DefinePlugin} from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
 export default {
   module: {
     loaders: [
@@ -12,6 +13,11 @@ export default {
       {
         test: /\.(js|jsx)?$/,
         loaders: ['babel-loader'],
+        plugins: [
+          'transform-runtime',
+          'transform-react-jsx-source'
+        ],
+        presets: ['latest', 'stage-0', 'react'],
         exclude: /node_modules/
       },
       {
@@ -25,6 +31,11 @@ export default {
       {
         test: /\.json$/,
         loader: 'json'
+      },
+      {
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel-loader'],
+        exclude: /node_modules/
       }
     ]
   },
@@ -45,7 +56,9 @@ export default {
     new HtmlWebpackPlugin({
       template: './app/index.html',
       inject: 'body'
-    }),
-    new HotModuleReplacementPlugin()
-  ]
+    })
+  ],
+  devServer: {
+    port: 3000
+  }
 }
