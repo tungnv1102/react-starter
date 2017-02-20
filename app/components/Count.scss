@@ -1,18 +1,23 @@
 .count-component {
-    margin-top: 20px;
-    color: #FFF;
-    font-size: 100px;
-    height: 116px;
-    line-height: 116px;
-    text-align: center;
-    .increment {
-        background-color: #2196F3;
-    }
+  margin-top: 20px;
+  color: #FFF;
+  font-size: 100px;
+  height: 116px;
+  line-height: 116px;
+  text-align: center;
+  display: flex;
+  .increment {
+    background-color: #2196F3;
+    margin-left: 5%;
+    width: 30%;
+  }
 
-    .decrement {
-        background-color: #F44336;
-    }
-    .count {
-        color: #FFEB3B;
-    }
+  .decrement {
+    width: 30%;
+    background-color: #F44336;
+  }
+  .count {
+    width: 30%;
+    color: #FFEB3B;
+  }
 }
