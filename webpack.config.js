@@ -1,4 +1,3 @@
-// noinspection JSUnresolvedVariable
 import {DefinePlugin} from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
@@ -7,37 +6,27 @@ export default {
     loaders: [
       {
         test: /\.html$/,
-        loader: 'raw',
+        loader: 'raw-loader',
         exclude: /node_modules/
       },
       {
         test: /\.(js|jsx)?$/,
-        loaders: ['babel-loader'],
-        plugins: [
-          'transform-runtime',
-          'transform-react-jsx-source'
-        ],
-        presets: ['latest', 'stage-0', 'react'],
+        loaders: ['react-hot-loader', 'istanbul-instrumenter-loader', 'babel-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-        loader: 'file'
+        loader: 'file-loader'
       },
       {
         test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel-loader'],
-        exclude: /node_modules/
+        loader: 'json-loader'
       }
-    ]
+    ],
   },
   entry: [
     './app/index.jsx'
@@ -47,7 +36,7 @@ export default {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json']
   },
   plugins: [
     new DefinePlugin({
@@ -59,6 +48,7 @@ export default {
     })
   ],
   devServer: {
-    port: 3000
-  }
+    port: 3000,
+    historyApiFallback: true
+  },
 }

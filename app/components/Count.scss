@@ -1,4 +1,38 @@
-.count-component {
+$primary: #28425f;
+$danger: #d74c2e;
+$white: #fff;
+
+button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+button:local(.btn-primary) {
+  color: $white;
+  background-color: $primary;
+  &:hover {
+    background-color: #53687f;
+  }
+  &:focus, &:active {
+    background-color: #20354c;
+  }
+}
+
+button:local(.btn-danger) {
+  color: $white;
+  background-color: $danger;
+  &:hover {
+    background-color: #df7058;
+  }
+  &:focus, &:active {
+    background-color: #ac3d25;
+  }
+}
+
+:local(.count-component) {
   margin-top: 20px;
   color: #FFF;
   font-size: 100px;
@@ -6,18 +40,5 @@
   line-height: 116px;
   text-align: center;
   display: flex;
-  .increment {
-    background-color: #2196F3;
-    margin-left: 5%;
-    width: 30%;
-  }
-
-  .decrement {
-    width: 30%;
-    background-color: #F44336;
-  }
-  .count {
-    width: 30%;
-    color: #FFEB3B;
-  }
+  display: -webkit-flex;
 }

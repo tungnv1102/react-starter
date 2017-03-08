@@ -1,4 +1,3 @@
-// noinspection JSUnresolvedVariable
 import React, {Component} from 'react'
 import Count from '../components/Count'
 

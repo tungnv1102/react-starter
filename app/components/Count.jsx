@@ -1,8 +1,7 @@
-// noinspection JSUnresolvedVariable
 import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 import {FETCH_USER_DETAIL} from '../constants'
-import './Count.scss'
+import countStyles from './Count.scss'
 
 class Count extends Component {
   static propTypes = {
@@ -13,10 +12,10 @@ class Count extends Component {
 
   render () {
     const {obj, increment, decrement} = this.props
-    return <div className='count-component'>
-      <button className='increment' onClick={increment}>+</button>
+    return <div className={countStyles['count-component']}>
+      <button className={countStyles['btn-primary']} onClick={increment}>+</button>
       <div className='count'>{obj && obj['avatar_url'] && <img src={obj['avatar_url']} />}</div>
-      <button className='decrement' onClick={decrement}>-</button>
+      <button className={countStyles['btn-danger']} onClick={decrement}>-</button>
     </div>
   }
 }
@@ -32,9 +31,6 @@ export default connect(
       increment: () => {
         dispatch({type: FETCH_USER_DETAIL})
       }
-      // decrement: () => {
-      //   dispatch({type: Actions.})
-      // }
     }
   }
 )(Count)
