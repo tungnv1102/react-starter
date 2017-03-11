@@ -5,7 +5,7 @@ let div = document.createElement('div')
 div.setAttribute('id', 'root')
 document.body.appendChild(div)
 
-let context = require.context('.', true, /\.test\./)
+let context = require.context('./app', true, /\.test\./)
 context.keys().forEach(context)
 
 let appContext = require.context('../app', true, /\.(js|jsx)$/)
