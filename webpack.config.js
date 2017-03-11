@@ -26,7 +26,7 @@ export default {
         test: /\.json$/,
         loader: 'json-loader'
       }
-    ],
+    ]
   },
   entry: [
     './app/index.jsx'
@@ -50,5 +50,5 @@ export default {
   devServer: {
     port: 3000,
     historyApiFallback: true
-  },
+  }
 }

@@ -13,7 +13,7 @@ module.exports = function (config) {
     exclude: [],
 
     preprocessors: {
-      'test/index.js': ['webpack', 'sourcemap'],
+      'test/index.js': ['webpack', 'sourcemap']
     },
 
     reporters: ['progress', 'coverage-istanbul'],

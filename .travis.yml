@@ -11,7 +11,7 @@ cache:
 
 install:
   - npm install -g npm@latest
-  - npm i -g cross-env eslint eslint-plugin-react sass-lint
+  - npm i -g cross-env sass-lint standard eslint-plugin-flowtype babel-eslint snazzy
   - npm install
 
 script:
