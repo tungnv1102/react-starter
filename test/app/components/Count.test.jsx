@@ -15,9 +15,10 @@ describe('[COMPONENTS]', () => {
       }
     })
     const component = mount(<Provider store={store}><Count /></Provider>)
-    expect(component.find('._1t5AC-XgEPG4oT1bzBW2xZ').text()).toBe('+')
-    expect(component.find('._1VRYqJ9s-fRpJ0gCjJNntb').text()).toBe('-')
-    expect(component.find('.count img').html().indexOf('https://avatars0.githubusercontent.com/u/583231?v=3')).toBeGreaterThan(-1)
+    const buttons = component.find('button')
+    expect(buttons.at(0).text()).toBe('+')
+    expect(buttons.at(1).text()).toBe('-')
+    expect(component.find('img').html().indexOf('https://avatars0.githubusercontent.com/u/583231?v=3')).toBeGreaterThan(-1)
     done()
   })
 })

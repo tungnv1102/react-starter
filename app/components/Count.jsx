@@ -15,7 +15,7 @@ class Count extends Component {
     const url = obj && obj['avatar_url'];
     return <div className={countStyles['count-component']}>
       <button className={countStyles['btn-primary']} onClick={increment}>+</button>
-      <div className='count'>{url && <img src={url} />}</div>
+      {url && <img src={url} />}
       <button className={countStyles['btn-danger']} onClick={decrement}>-</button>
     </div>
   }
