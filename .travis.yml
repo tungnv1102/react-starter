@@ -1,6 +1,9 @@
-sudo: false
+sudo: required
+dist: trusty
 
 language: node_js
+node_js:
+  - 6
 
 before_install:
  - export CHROME_BIN=/usr/bin/google-chrome
@@ -10,8 +13,6 @@ before_install:
  - sudo apt-get install -y libappindicator1 fonts-liberation
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
-node_js:
-  - 6
 
 cache:
   directories:
