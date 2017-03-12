@@ -26,12 +26,23 @@ module.exports = function (config) {
 
     autoWatch: true,
 
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
+
+    client: {
+      config: {
+        browserConsoleLogOptions: true
+      }
+    },
 
     concurrency: Infinity,
     webpack: {
       ...webpack,
-      devtool: 'source-map'
+      externals: {
+        'cheerio': 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+      },
     },
 
     coverageIstanbulReporter: {

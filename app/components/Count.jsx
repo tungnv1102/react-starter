@@ -12,9 +12,10 @@ class Count extends Component {
 
   render () {
     const {obj, increment, decrement} = this.props
+    const url = obj && obj['avatar_url'];
     return <div className={countStyles['count-component']}>
       <button className={countStyles['btn-primary']} onClick={increment}>+</button>
-      <div className='count'>{obj && obj['avatar_url'] && <img src={obj['avatar_url']} />}</div>
+      <div className='count'>{url && <img src={url} />}</div>
       <button className={countStyles['btn-danger']} onClick={decrement}>-</button>
     </div>
   }
@@ -23,7 +24,7 @@ class Count extends Component {
 export default connect(
   (state) => {
     return {
-      obj: state.count.get('obj')
+      obj: state.count && state.count.obj
     }
   },
   (dispatch) => {
