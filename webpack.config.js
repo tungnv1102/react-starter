@@ -38,6 +38,7 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
+  devtool: 'source-map',
   plugins: [
     new DefinePlugin({
       __DEV__: !process.env.NODE_ENV || process.env.NODE_ENV !== 'production'
